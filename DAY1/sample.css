@@ -1,0 +1,13 @@
+/* 
+CSS 주석
+재사용 가능한 스타일들을 정의해 사용하는 방식 제공
+
+CSS 파일의 목적은 다양한 HTML 태그 선택자 별로 스타일을 정의해서
+CSS 파일을 참조하는 모든 HTML 페이지에서 재사용하기 위함
+*/
+
+h1 {
+    background-color: blue;
+    color: red;
+    padding: 30px;
+}

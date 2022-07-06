@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>CSS-선택자-클래스 선택자</title>
+
+    <style>
+        /*
+        클래스명을 이용해 스타일을 정의하ㅕ면 클래스 선택자를 이용합니다.
+        클래스 선택자를 정의하려면 .클래스명{} 정의합니다
+        */
+        
+        h1 {
+            /* 태그 선택자 이용 */
+            background-color: blue;
+        }
+        /* 클래스 선택자 이용 */
+        
+        .mystyle {
+            color: red;
+            font-size: 50px;
+        }
+        
+        .yourstyle {
+            color: green;
+            width: 500px;
+            height: 120px;
+        }
+        
+        .gangnamstyle {
+            width: 100%;
+            border: 5px solid black;
+        }
+        
+        .container {
+            margin-top: 50px;
+            margin-left: 50px;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body class="container">
+
+    <!-- 
+        클래스 선택자 - 태그 유형에 상관 없이 태그의 클래스 속성으로 클래스 명을 지정하고
+        지정된 클래스 명에 대해 스타일을 일괄 적용하는 방식
+
+        클래스 선택자 사용 방법
+        step1) html 태그에 클래스 속성에 임의의 클래스명을 지정한다.
+        step2) 클래스 선택자를 이용해 해당 클래스의 스타일을 정의한다.
+    -->
+
+    <h1 class="mystyle">CSS-선택자-클래스 선택자로 스타일 적용하기</h1>
+
+    <p class="mystyle">
+        CSS 선택자 중에 클래스 선택자를이용해 HTML 태그들을 선택해 스타일을 적용한다.
+    </p>
+
+    <hr>
+
+    <div>
+        DIV 태그는 영역을 나타내는 태그1 입니다.
+    </div>
+
+    <br><br>
+
+    <div class="yourstyle">
+        DIV 태그는 영역을 나타내는 태그2 입니다.
+    </div>
+
+    <p class="gangnamstyle">
+        CSS 선택자 중에 클래스 선택자를이용해 HTML 태그들을 선택해 스타일을 적용한다.
+    </p>
+
+</body>
+
+</html>

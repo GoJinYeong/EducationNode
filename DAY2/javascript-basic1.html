@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>자바스크립트-기초1-HTML제어1</h1>
+
+    <h1 id="title">노드백엔드 개발자 양성과정</h1>
+
+    <section id="contents">
+        Node.js express기반 백엔드 개발자 <b>양성</b> 과정내용입니다.
+    </section>
+
+    <!--
+        스크립트 태그 내에 javaScript 기능을 구현합니다.
+        script 태그는 닫는 body 태그 상단에 존재하는 것이 좋다. 왜?
+        클라이언트 자바스크립트 기본적인 목적이 HTML태그나 CSS 제어한다. 
+    -->
+
+    <script>
+        // 사용자 웹브라우저 메모리에 저장된 html(DOM= Document Object Model)
+        // 자바스크립트엔진(브라우저에 탑재된)에서 제공해주는 documennt 객체의 getElementById("태그아이디명") 메소드가 
+        // 해당 html요소를 반환해 변수인 sectionTag에 저장합니다.
+
+        // var예약어는 변수 선언 방식입니다.
+        // DOM 상에존재하는 아이디가 contents인 HTML태그를 찾아서 sectionTage변수에 저장한다.
+        var sectionTag = document.getElementById("contents");
+
+        // 해당 캐그에 innerHTML속성을 이용해 내용값을 변경합니다.
+        sectionTag.innerHTML = "<b>React.js 과정</b>입니다.";
+    </script>
+</body>
+
+</html>

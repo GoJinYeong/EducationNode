@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>CSS-선택자- 아이디 선택자</title>
+
+    <style>
+        /* 아이디 선택자는 해당 캐그의 아이디값으로 스타일을 지정합니다
+    #아이디값으로 정의합니다. */
+        
+        #pageTitle1 {
+            font-size: 20px;
+        }
+        
+        #pageTitle2 {
+            font-size: 40px;
+        }
+        
+        #pagedesc {
+            font-size: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+        HTML 태그는 태그 간에 유일성을 보장하기 위해 id 속성을 제공합니다
+        HTML 태그의 기본 속성인 id(identity-유일성/고유함 보장) 속성의 값은 중복해서는 안된다. 
+    -->
+    <!-- 
+        id 선택자를 이용해 스타일 적용 절차
+        step1: 해당 태그에 id 속성에 유일한 id 값을 설정한다
+        step2: 해당 id 값으로 아이디 선택자를 정의하고 스타일을 선언한다. 
+    -->
+
+    <h1 id="pageTitle1">CSS-선택자-아이디 선택자로 스타일 적용하기</h1>
+
+    <h1 id="pageTitle2">CSS-선택자-아이디 선택자로 스타일 적용하기</h1>
+
+    <p id="pagedesc">
+        CSS 선택자 중에 아이디 선택자를 이용해 HTML 태그들을 선택해 스타일을 적용한다.
+    </p>
+
+    <div>
+        레이아웃 영역입니다.
+    </div>
+
+</body>
+
+</html>

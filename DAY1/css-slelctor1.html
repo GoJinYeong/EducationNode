@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>CSS-선택자-태그선택자</title>
+
+    <style>
+        /*
+            태그 이름으로 스타일을 일괄 적용하는 방식
+            특정 태그에 대해 해당페이지 내 모든 동일 태그는 동일 스타일이 적용된다.
+        */
+        /*이 html 문서 내 모든 h1 태그는 아래 스타일이 적용된다.*/
+        
+        h1 {
+            background-color: red;
+            color: yellow;
+        }
+        
+        p {
+            width: 4000px;
+            height: 50px;
+            border: 1px solid red;
+        }
+        
+        div {
+            width: 100%;
+            height: 50px;
+            background-color: gray;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS-선택자-태그선택자로 스타일 적용하기</h1>
+
+    <p>
+        CSS 선택자 중에 태그 선택자를이용해 HTML 태그들을 선택해 스타일을 적용한다.
+    </p>
+
+    <hr>
+
+    <div>
+        DIV 태그는 영역을 나타내는 태그1 입니다.
+    </div>
+
+    <br><br>
+
+    <div style="background-color: pink;">
+        DIV 태그는 영역을 나타내는 태그2 입니다.
+    </div>
+
+    <p>
+        CSS 선택자 중에 태그 선택자를이용해 HTML 태그들을 선택해 스타일을 적용한다.
+    </p>
+
+</body>
+
+</html>
