@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>동적으로 게시글 목록 생성하기</title>
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        td {
+            border: 1px solid gray;
+        }
+        
+        #pageTitle {
+            color: blue;
+        }
+        
+        .articleLink {
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="pageTitle">게시글 목록</h1>
+
+    <a href="./create.html" class="articleLink">게시글 작성</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>조회수</th>
+                <th>IP주소</th>
+                <th>작성자</th>
+                <th>작성일시</th>
+            </tr>
+        </thead>
+
+        <tbody id="list">
+            <tr>
+                <td>1</td>
+                <td>게시글 제목1입니다.</td>
+                <td>100</td>
+                <td>111.222.111.22</td>
+                <td>고진영</td>
+                <td>2022.07.08</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>게시글 제목2입니다.</td>
+                <td>200</td>
+                <td>111.222.111.22</td>
+                <td>고진영2</td>
+                <td>2022.07.09</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- JQuery 라이브러리 CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        // 게시글 목록 JSON 데이터 목록-배열 준비하기
+        var articles = [{
+            idx: 3,
+            title: "게시글 제목 3입니다.",
+            viewcnt: 100,
+            ipaddress: "111.222.111.111",
+            writer: "고진영",
+            writedate: "2022.07.08"
+        }, {
+            idx: 4,
+            title: "게시글 제목 4입니다.",
+            viewcnt: 200,
+            ipaddress: "111.222.111.111",
+            writer: "고진영2",
+            writedate: "2022.07.09"
+        }];
+
+        //for (var i = 0; i < articles.length; i++) {
+        $.each(articles, function(i, item) {
+            console.log("배열순서", i);
+
+            var trCode = `
+            <tr>
+                <td>${item.idx}</td>
+                <td>${item.title}</td>
+                <td>${item.viewcnt}</td>
+                <td>${item.ipaddress}</td>
+                <td>${item.writer}</td>
+                <td>${item.writedate}</td>
+            </tr>`;
+
+            $("#list").append(trCode);
+        })
+    </script>
+</body>
+
+</html>
