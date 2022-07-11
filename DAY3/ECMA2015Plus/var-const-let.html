@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>자바스크립트-변수정의사용규칙</title>
+</head>
+
+<body>
+
+    <script>
+        // 전통적인 자바스크립트 변수선언/할당 방법 var
+        var userName = "고진영"; // string
+        var age = 10; // int
+        var price = 5000; // int
+        var isMale = true; // boolean
+
+        // 전통적인 var 변수선언방식은 변수 선언 없이도 값이 할당 가능하고 블록스코프 밖에서도 언제든 값의 변경 가능
+        if (isMale == true) {
+            msg = "남성입니다";
+            console.log("현재 msg 값은 ", msg);
+        }
+
+        // 전통적인 var변수는 블록스코프(범위)를 따지지 않고 아무데서나 선언하고 아무데서나 값을 할당/변경 가능합니다.
+        msg = "여성입니다";
+        console.log("최종 msg 값은 ", msg);
+
+        // 새로운 변수선언방식이 ES2015에 추가됨.
+        // const / let 방식 제공
+
+        // const 상수 변수 한번 할당하면 재할당(변경) 불가
+        const defalutDelyFee = 3000; // 기본 배송비
+        const productSum = 15000; // 기본 제품 가격
+        const region = "제주도";
+
+        // const로 선언된 값을 변경해보기 - 에러 발생해야 정상
+        //defalutDelyFee = 5000;
+
+        // let 변수 할당방식은 값을 재할당(변경) 가능하지만 블록스코프를 준수해야한다.
+        let totalPayPrice = 0;
+
+        // 총 결제 금액 = 기본 제품 가격 + 기본배송비의 합 으로 재할당
+        totalPayPrice = productSum + defalutDelyFee;
+        console.log("현재 총 결제 금액: ", totalPayPrice);
+
+        if (region == "제주도") {
+            let addDelyFee = 1000;
+            totalPayPrice += addDelyFee;
+
+            // 같은 영역내에서의 값의 재할당은 가능하다
+            addDelyFee += 100;
+            totalPayPrice += addDelyFee;
+        }
+
+        // let으로 if 블럭 스코프에서 선언된 변수값을 재사용하면 에러가 난다.
+        // let으로 선언된 변수의 값 재할당은 해당 영역 내에서만 가능하다
+        // const도 동일하게 특정 영역에서 정의된 const는 해당 범위 밖에서 재사용이 불가능하다.
+        // totalPayPrice += addDelyFee;
+
+        console.log("두번째 총 결제 금액: ", totalPayPrice);
+    </script>
+</body>
+
+</html>
