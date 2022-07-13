@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+
+    <script>
+        const gender = "male";
+        let age = 40;
+
+        age = 50;
+
+        // 블록 스코프내에서 선언 된 변수/상수는 범위밖에서 사용 불가
+        if (gender == "male") {
+            const test1 = "테스트1";
+            let nation = "한국";
+        }
+
+        console.log("테스트 상수 값은 ", test1); // 에러 발생
+        console.log("국가 코드명은 ", nation); // 에러 발생
+        console.log("현재 나이는?  ", age); // 정상 사용 가능
+    </script>
+</body>
+
+</html>
