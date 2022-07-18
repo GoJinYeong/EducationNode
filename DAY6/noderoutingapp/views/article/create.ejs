@@ -1,0 +1,15 @@
+<html>
+
+    <body>
+        <h1>게시글 작성</h1>
+        <form method="post" action="/articles/regist">
+            <!-- node에서는 폼 태그 내에 전달하는 데이터는 tag에 name 속성 값으로 백엔드에 전달됩니다. -->
+            제목:<input type="text" name="title"><br>
+            내용:<textarea name="contents"></textarea><br>
+            글쓴이:<input type="text" name="register"><br>
+            <input type="submit" value="등록">
+        </form>
+        
+
+    </body>
+</html>
