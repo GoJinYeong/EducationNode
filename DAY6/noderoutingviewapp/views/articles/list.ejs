@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>게시글 목록 웹페이지</title>
+    </head>
+    <body>
+        <h1>게시글 목록 웹페이지</h1>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <!-- 쿼리리스트방식으로 호출 -->
+                        <a href="/articles/update?idx=1&stock=100">
+                            글제목1
+                        </a>
+                    </td>
+                    <td>100</td>
+                    <td>111.111.111.111</td>
+                    <td>고진영</td>
+                    <td>2022.02.11</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        <!-- 파라메터방식(와일드카드)으로 호출 -->
+                        <a href="/articles/update/2">
+                            글제목2
+                        </a>
+                    </td>
+                    <td>200</td>
+                    <td>222.222.222.222</td>
+                    <td>고진영22</td>
+                    <td>2022.03.11</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>ECMAScript - 다양한 자바스크립트 함수 사용법</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        // 코드의 재사용: 코드는 DRY하게 코딩 할 것!!!
+        // 반복 코딩을 줄일 수 있는 방법! 함수 사용
+
+        // CASE1: 전통적인 함수 선언 및 사용방법
+        // function 함수명(함수 내부에 전달하는 매개변수(파라메터)){함수기능구현 코드 return 반환값}
+        // 함수는 값을 반환할 수도 있고 반환하지 않은 함수도 있다.
+        function add1(a, b) {
+            let c = a + b;
+            return c;
+        }
+
+        // 함수의 사용
+        // 함수를 호출하고 호출시 매개변수(파라메터)를 전달
+        var result1 = add1(1, 2);
+        console.log("함수 add1(1,2)의 결과값: ", result1);
+
+        // CASE2: 동일한 함수의 코드를 좀 더 줄여보자: 익명 함수
+        // 익명함수를 정의하는 방법
+        var noNameFunction = function(a, b) {
+            return a + b;
+        }
+
+        // 익명함수를 호출해서 사용해보자
+        var result2 = noNameFunction(3, 4);
+        console.log("익명함수의 결과값: ", result2);
+
+        // CASE3: 익명함수보다 좀 더 코드를 줄여보자: 화살표 함수
+        const arrowFuntion = (a, b) => {
+            return a + b;
+        }
+
+        // 정의된 화살표함수를 호출해 사용한다
+        var result3 = arrowFuntion(50, 60);
+        console.log("화살표 함수의 결과값: ", result3);
+
+        // CASE4: 기본 화살표함수 보다 코드를 더 줄엽자: 화살표함수(retrun 구문 생략)
+        const arrowFuntion2 = (x, y) => (x + y);
+        console.log("return 구문을 생략한 화살표 함수의 실행결과: ", arrowFuntion2(60, 70));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "jiny-node-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoJinYeong/JinyNodeBackendPr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GoJinYeong/JinyNodeBackendPr/issues"
+  },
+  "homepage": "https://github.com/GoJinYeong/JinyNodeBackendPr#readme",
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}

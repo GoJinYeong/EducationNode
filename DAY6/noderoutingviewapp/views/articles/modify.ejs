@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>게시글 수정화면-웹페이지</title>
+    </head>
+    <body>
+        <h1>게시글 수정 웹페이지</h1>
+
+        <form method="post" action="/articles/update">
+            글제목:<input type="text" name="title" value="<%=article.title%>">   <br>
+            <input type="submit" value="수정">
+            <input type="button" value="삭제" onclick="fnDelete();">
+        </form>
+
+        <script>
+            // 최종 삭제 확인(confirm) 후 삭제 페이지 호출
+            function fnDelete(){
+                if(confirm("정말로 삭제하시겠습니까?")){
+                    location.href="/articles/delete?idx=1"
+                }else{
+                    alert("삭제를 취소하셨습니다.");
+                }
+
+            }
+        </script>
+    </body>
+</html>

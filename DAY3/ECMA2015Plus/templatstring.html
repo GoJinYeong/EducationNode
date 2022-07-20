@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ECMA - 템플릿 문자열 사용하기</title>
+</head>
+
+<br> 제품 가격: <input type="text" id="price" value="10000"><br> 배송비: <input type="text" id="delyFee" value="2500"><br> 카드수수로: <input type="text" id="cardFee" value="500"><br> 총결제금액: <input type="text" id="totalPayAmt"><br>
+
+<hr>
+<div id="payHistory">
+
+</div>
+
+<script>
+    // 탬플릿 문자열 테스트
+    // Case1: 전통적인 문자열과 변수를 조합할 때는 +로 조합한다
+    var productPrice = document.getElementById("price").value;
+    var delyFee = document.getElementById("delyFee").value;
+    var cardFee = document.getElementById("cardFee").value;
+
+    // 총결제금액
+    var totalPay = parseInt(productPrice) + parseInt(delyFee) + parseInt(cardFee);
+    document.getElementById("totalPayAmt").value = totalPay;
+
+    var payHistory = "제품가격은 " + productPrice + "원이고 배송비는 " + delyFee + "원이며 카드수수료는 " + cardFee + "원이어서 총 결제 금액은" + totalPay + "원입니다.";
+    console.log(payHistory);
+
+    // ECMA 템플릿 문자열 코딩방식으로 문자열변수 조합하기
+    var payHistory2 = `제품의 가격은 ${productPrice}원이고 배송비는 ${delyFee}원이며 카드수수료는 ${cardFee}원이어서 총결제금액은 ${totalPay}원입니다.`;
+    console.log(payHistory2);
+
+    // div태그에 결제 내역을 확인한디
+    document.getElementById("payHistory").innerText = payHistory2;
+</script>
+</body>
+
+</html>
