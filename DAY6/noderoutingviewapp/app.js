@@ -21,7 +21,7 @@ app.set('view engine', 'ejs');
 
 //ejs-layouts setting
 app.set('layout', 'layout'); //기본 레이아웃 페이지 뷰 설정하기 
-app.set("layout extractScripts", true);
+app.set("layout extractScripts", true); // 스크립트 참조 기능
 app.use(expressLayouts);
 
 app.use(logger('dev'));

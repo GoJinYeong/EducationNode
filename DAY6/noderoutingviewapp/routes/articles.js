@@ -5,7 +5,60 @@ var path = require('path');
 // 게시글 목록 페이지 호출 라우팅 메소드-GET
 // http://localhost:3000/articles/list
 router.get('/list', function(req, res, next) {
-    res.render('articles/list.ejs');
+
+    // step1: DB에서 게시글 목록 데이터를 조회해옵니다.
+
+    // step2: DB에서 가져온 게시글 목록 : 가정
+    const articleList=[
+        {
+            idx:1,
+            title:"게시글 제목1입니다",
+            viewcnt:100,
+            ip:"111.111.111.111",
+            displayyn:true,
+            register:"고진영",
+            registdate:"22.07.01"
+        },
+        {
+            idx:2,
+            title:"게시글 제목2입니다",
+            viewcnt:200,
+            ip:"222.222.222.222",
+            displayyn:false,
+            register:"고진영2",
+            registdate:"22.07.02"
+        },
+        {
+            idx:3,
+            title:"게시글 제목3입니다",
+            viewcnt:300,
+            ip:"113.111.111.111",
+            displayyn:true,
+            register:"고진영3",
+            registdate:"22.07.03"
+        },
+        {
+            idx:4,
+            title:"게시글 제목4입니다",
+            viewcnt:400,
+            ip:"114.111.111.111",
+            displayyn:true,
+            register:"고진영4",
+            registdate:"22.07.04"
+        },
+        {
+            idx:5,
+            title:"게시글 제목5입니다",
+            viewcnt:500,
+            ip:"115.111.111.111",
+            displayyn:true,
+            register:"고진영5",
+            registdate:"22.07.05"
+        }
+    ];
+
+    res.render('articles/list.ejs',{articleList});
+    //res.render('articles/list.ejs',{layout:'mylayout.ejs'});
 });
 
 // 게시글 등록 페이지 반환-GET
@@ -21,7 +74,13 @@ router.post('/create',function (req, res) {
     
     // step1:웹브라우저에서 form 태그 내 전달되는 데이터를 추출한다.
     var title = req.body.title; // 사용자 입력 값 추출
-    console.log("사용자가 입력한 게시글 제목:",title);
+    var contents = req.body.contents;
+
+    var artticleData = {
+        title:title, 
+        contents: contents
+    };
+
 
     // step2: 추출된 사용자 입력값을 DB에 저장합니다.
 
@@ -34,10 +93,10 @@ router.post('/create',function (req, res) {
 router.get('/update', function(req, res){
 
     // QueryString 방식으로 전달되는 키값 추출
-    const idx = req.query.idx;
-    const stock = req.query.stock;
-    console.log("전달된 쿼리 스트링 idx:", idx);
-    console.log("전달된 쿼리 스트링 stock:", stock);
+    // const idx = req.query.idx;
+    // const stock = req.query.stock;
+    // console.log("전달된 쿼리 스트링 idx:", idx);
+    // console.log("전달된 쿼리 스트링 stock:", stock);
 
 
     // 해당 게시글 번호로 DB에서 단일 게시글 정보 조회해서 데이터를 가져왔다고 가정
